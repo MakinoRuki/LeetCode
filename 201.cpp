@@ -4,6 +4,7 @@ public:
         int ans = 0;
         for (int i = 0; i <= 30; ++i) {
             if (m == 0 && n == 0) break;
+            //区间/2以判断奇偶。
             if (n == m && (n % 2)) {
                 ans |= (1<<i);
             }
