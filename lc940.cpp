@@ -3,6 +3,7 @@ ll mod = 1000000007LL;
 class Solution {
 public:
     int n;
+    // 以字母i结尾的方案数。因为在乎的不是位置(选了j个)而是结束位置是什么字母。
     ll dp[30];
     int distinctSubseqII(string S) {
         n = S.size();
