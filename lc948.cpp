@@ -1,0 +1,1 @@
+把token排序然后能换成score就换成score。power不够了就用score换最大的token的power。
