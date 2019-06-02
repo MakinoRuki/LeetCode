@@ -17,10 +17,14 @@ public:
             add = sum / 2;
             sign = -sign;
         }
-        if (add) {
-            if (add % 2) ans.push_back(1);
-            else ans.push_back(0);
+        while(add) {
+            int bit = (add % 2) ? 1 : 0;
+            ans.push_back(bit);
+            add -= sign * bit;
+            add /= 2;
+            sign = -sign;
         }
+        while(ans.size() > 1 && ans.back() == 0) ans.pop_back();
         reverse(ans.begin(), ans.end());
         return ans;
     }
