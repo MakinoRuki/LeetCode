@@ -1,20 +1,24 @@
+// 最小就是枚举终点i，然后全部聚集到[i-n+1, i];
+// 最大就是每次把最边缘的移动到最靠近它的可以放的位置。
 class Solution {
 public:
     int n;
     vector<int> numMovesStonesII(vector<int>& stones) {
-        sort(stones.begin(), stones.end());
         n = stones.size();
-        int ub = max(stones[n-1]-stones[1]-n+2, stones[n-2]-stones[0]-n+2);
-        int i = 0;
-        int lb = n;
-        for (int j = 0; j < n; ++j) {
-            while(stones[j] - stones[i] >= n) i++;
-            if (j-i+1 == n-1 && stones[j]-stones[i]+1==n-1) {
-                lb=min(lb,2);
+        sort(stones.begin(), stones.end());
+        int maxs = max(stones[n-1]-stones[1]-(n-2), stones[n-2]-stones[0]-(n-2));
+        int mins = INT_MAX;
+        int j = 0;
+        for (int i = 0; i < n; ++i) {
+            while(j <= i && stones[i]-stones[j]+1 > n) {
+                j++;
+            }
+            if (i-j+1 == n-1 && stones[i]-stones[j]+1 == n-1) {
+                mins = min(mins, 2);
             } else {
-                lb=min(lb, n-(j-i+1));
+                mins = min(mins, n - (i-j+1));
             }
         }
-        return {lb, ub};
+        return {mins, maxs};
     }
 };
