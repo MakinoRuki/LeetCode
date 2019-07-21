@@ -1,3 +1,4 @@
+// 首尾取用deque
 /**
  * Definition for singly-linked list.
  * struct ListNode {
