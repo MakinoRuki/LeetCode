@@ -1,3 +1,4 @@
+// 相当于找一个翻转串t的最大suffix匹配s的最大prefix。
 class Solution {
 public:
     string shortestPalindrome(string s) {
