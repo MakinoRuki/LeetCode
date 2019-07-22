@@ -1,3 +1,4 @@
+// should be O(n+m) as row and col are independent.
 class Solution {
 public:
     int n,m;
