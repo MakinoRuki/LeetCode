@@ -1,3 +1,6 @@
+
+// pos[i]表示对于第i个素数，下次乘prime[i]的时候要从第pos[i]这个数开始乘起。
+// 可以类似认为是merge k sorted list。
 class Solution {
 public:
     int nthSuperUglyNumber(int n, vector<int>& primes) {
