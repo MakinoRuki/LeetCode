@@ -1,3 +1,4 @@
+// 3个parts的1的个数必然相等。
 #define N 30002
 class Solution {
 public:
