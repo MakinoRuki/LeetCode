@@ -1,3 +1,5 @@
+// 由长度为N的beautiful array得到长度为2N的beautiful array。
+// 由于长度为N的不存在ai+aj=2*ak，那么generate得到的长度为2N的奇数部分也不存在2*ai-1+2*aj-1=2*(2*ak-1)。
 class Solution {
 public:
     vector<int> beautifulArray(int N) {
