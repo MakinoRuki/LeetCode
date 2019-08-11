@@ -1,3 +1,4 @@
+// 每个人有个收支，然后贪心地去跟别人匹配。
 class Solution {
 public:
     unordered_map<int, int> debt;
