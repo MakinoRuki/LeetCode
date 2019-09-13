@@ -6,6 +6,8 @@
  *     int guess(string word);
  * };
  */
+// 每次希望可以remove掉尽可能多的不对的串。
+// 因此就猜那个出现最少的串。
 class Solution {
 public:
     void findSecretWord(vector<string>& wordlist, Master& master) {
