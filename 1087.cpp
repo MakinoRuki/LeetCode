@@ -1,3 +1,8 @@
+// 分四种情况检查：
+// 1. 只有字母
+// 2. 括号扩起字母
+// 3. 逗号分割，是相加关系
+// 4. 没有逗号分割，是括号相乘关系
 class Solution {
 public:
     vector<string> expand(string S) {
