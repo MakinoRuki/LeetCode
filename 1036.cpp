@@ -1,3 +1,5 @@
+// 200个block围起来的墙最多n*n/2个格子。因此搜到大于这么多就是没有被围住了。
+
 #define mp make_pair
 class Solution {
 public:
