@@ -1,3 +1,4 @@
+// 矩形的条件：对角线长度相等且互相平分(中点相同)。
 #define mp make_pair
 class Solution {
 public:
