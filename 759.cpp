@@ -23,6 +23,7 @@ struct node {
         return b > x.b;
     }
 };
+// O(C*log(N)) + O(N)
 class Solution {
 public:
     vector<Interval*> employeeFreeTime(vector<vector<Interval*>> schedule) {
@@ -78,6 +79,7 @@ public:
 private:
     priority_queue<node> pq;
 };
+// O(C*log(C)) + O(C)
 // class Solution {
 // public:
 //     vector<Interval*> employeeFreeTime(vector<vector<Interval*>> schedule) {
