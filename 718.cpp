@@ -1,6 +1,7 @@
 // 或者可以二分+hash。
 class Solution {
 public:
+    // 因为f[i,j]仅depend on f[i-1,j-1]。
     int findLength(vector<int>& A, vector<int>& B) {
         int ans=0;
         int n = A.size();
